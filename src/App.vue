@@ -1,0 +1,12 @@
+<template>
+  <router-view/>
+</template>
+
+<style>
+  * {
+    font-family: Helvetica;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+</style>
