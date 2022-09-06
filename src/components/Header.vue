@@ -1,8 +1,6 @@
 <template>
   <div id="nav">
-    <router-link to="/" id="name_site">
-      <h1 id="name">Montar seleção</h1>
-    </router-link>
+    <h1 id="name">Montar seleção</h1>
     <router-link to="/">Home</router-link>
     <router-link to="/about">Adicionar</router-link>
   </div>
@@ -16,23 +14,23 @@ export default {
 
 <style scoped>
 #nav {
-  background-color: #222;
-  border-bottom: 4px solid #111;
+  background-color: #f7e004;
   padding: 15px 50px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
-#nav #name_site {
+
+#name {
   margin: auto;
   margin-left: 0;
-}
-#name {
   width: 300px;
   height: 40px;
+  color: #586ba0;
 }
 #nav a {
-  color: #fcba03;
+  color: #586ba0;
+  font-size: 1.1rem;
   text-decoration: none;
   margin: 12px;
   transition: 0.5s;
