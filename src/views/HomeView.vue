@@ -1,15 +1,17 @@
 <template>
 <div>
   <nav-header />
-  <h1>Home</h1>
+  <list-player />
 </div>
 </template>
 
 <script>
+import ListPlayer from '@/components/ListPlayer.vue'
 import NavHeader from "@/components/Header.vue";
 export default {
   name: "HomeView",
   components: {
+    ListPlayer,
     NavHeader
   }
 };

@@ -4,43 +4,69 @@
     <div class="register-player">
       <div class="information">
         <label for="name">Nome do jogador</label>
-        <input type="text" name="name" placeholder="Nome" v-model="namePlayer" />
+        <input
+          type="text"
+          name="name"
+          placeholder="Nome"
+          v-model="namePlayer"
+        />
       </div>
 
       <div class="information">
         <label for="position">Posição</label>
         <select name="position" v-model="positionPlayer">
-          <option value="1">Goleiro</option>
-          <option value="2">Zagueiro</option>
-          <option value="3">Meio campo</option>
-          <option value="4">Atacante</option>
+          <option value="Goleiro">Goleiro</option>
+          <option value="Zagueiro">Zagueiro</option>
+          <option value="Lateral">Lateral</option>
+          <option value="Meio campo">Meio campo</option>
+          <option value="Atacante">Atacante</option>
         </select>
       </div>
 
       <div class="information">
         <label for="club">Clube</label>
-        <input type="text" name="club" placeholder="Clube" v-model="clubPlayer" />
+        <input
+          type="text"
+          name="club"
+          placeholder="Clube"
+          v-model="clubPlayer"
+        />
       </div>
     </div>
     <div class="summon">
-        <button @click="summon">Convocar</button>
+      <button @click="summon">Convocar</button>
     </div>
   </div>
 </template>
 
 <script>
+import { mapMutations } from 'vuex';
 export default {
   name: "AddPlayers",
   data: () => ({
-    namePlayer: '',
-    positionPlayer: '',
-    clubPlayer: ''
+    namePlayer: "",
+    positionPlayer: "",
+    clubPlayer: "",
   }),
   methods: {
+    ...mapMutations(['setPlayers']),
     summon() {
-        console.log('Clique')
-    }
-  }
+      let player = {
+        name: this.namePlayer,
+        position: this.positionPlayer,
+        club: this.clubPlayer,
+      };
+
+      this.resetDataPlayer();
+
+      this.setPlayers(player)
+    },
+    resetDataPlayer() {
+      this.namePlayer = "",
+      this.positionPlayer = "",
+      this.clubPlayer = "";
+    },
+  },
 };
 </script>
 
@@ -76,42 +102,42 @@ export default {
 }
 
 .information label {
-    font-size: 1.15rem;
-    font-style: italic;
-    font-weight: bolder;
-    margin-bottom: 5px;
-    text-align: center;
+  font-size: 1.15rem;
+  font-style: italic;
+  font-weight: bolder;
+  margin-bottom: 5px;
+  text-align: center;
 }
 
 .information input,
 .information select {
-    width: 250px;
-    height: 40px;
-    border: 1px solid black;
-    border-radius: 10px;
-    outline: none;
-    padding-left: 10px;
-    font-size: 1rem;
-    margin-bottom: 5px;
+  width: 250px;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 10px;
+  outline: none;
+  padding-left: 10px;
+  font-size: 1rem;
+  margin-bottom: 5px;
 }
 
 .summon {
-    padding: 30px 0;
+  padding: 30px 0;
 }
 
 .summon button {
-    width: 120px;
-    height: 40px;
-    border: none;
-    border-radius: 20px;
-    font-size: 1.15rem;
-    background: #04822c;
-    color: #fff;
-    cursor: pointer;
-    transition: .7s;
+  width: 120px;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  font-size: 1.15rem;
+  background: #04822c;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.7s;
 }
 
 .summon button:hover {
-    opacity: .8;
+  opacity: 0.8;
 }
 </style>

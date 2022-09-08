@@ -1,6 +1,6 @@
 <template>
   <div id="nav">
-    <h1 id="name">Montar seleção</h1>
+    <h1 id="name">Seleção brasileira</h1>
     <router-link to="/">Home</router-link>
     <router-link to="/about">Adicionar</router-link>
   </div>
