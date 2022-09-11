@@ -2,40 +2,40 @@
   <div>
     <div class="row">
       <div class="col">
-        <h5><i class="bi-file-person me-2"></i>Jogadores</h5>
+        <h5><i class="bi-file-person me-3"></i>Jogadores</h5>
         <ul class="nav nav-tabs">
           <li class="nav-item">
             <router-link
               class="nav-link"
-              :to="{ name: 'players', params: { tipo: 'goleiros' } }"
+              :to="{ name: 'posicao', params: { tipo: 'goleiros' } }"
               >Goleiros</router-link
             >
           </li>
           <li class="nav-item">
             <router-link
               class="nav-link"
-              :to="{ name: 'players', params: { tipo: 'zagueiros' } }"
+              :to="{ name: 'posicao', params: { tipo: 'zagueiros' } }"
               >Zagueiros</router-link
             >
           </li>
           <li class="nav-item">
             <router-link
               class="nav-link"
-              :to="{ name: 'players', params: { tipo: 'laterais' } }"
+              :to="{ name: 'posicao', params: { tipo: 'laterais' } }"
               >Laterais</router-link
             >
           </li>
           <li class="nav-item">
             <router-link
               class="nav-link"
-              :to="{ name: 'players', params: { tipo: 'meio-campo' } }"
+              :to="{ name: 'posicao', params: { tipo: 'meio-campo' } }"
               >Meios campo</router-link
             >
           </li>
           <li class="nav-item">
             <router-link
               class="nav-link"
-              :to="{ name: 'players', params: { tipo: 'atacantes' } }"
+              :to="{ name: 'posicao', params: { tipo: 'atacantes' } }"
               >Atacantes</router-link
             >
           </li>
@@ -43,8 +43,8 @@
       </div>
     </div>
     <div class="row">
-      <div class="col">
-        <span><router-view name="players" /></span>
+      <div class="col mt-2">
+        <span><router-view name="posicao" /></span>
       </div>
     </div>
   </div>
@@ -52,6 +52,6 @@
 
 <script>
 export default {
-  name: "Players",
+  name: "Jogadores",
 };
 </script>

@@ -9,7 +9,7 @@
     <div class="container">
       <div class="row mt-5">
         <div class="col">
-          <players />
+          <jogadores />
         </div>
       </div>
     </div>
@@ -17,12 +17,12 @@
 </template>
 
 <script>
-import Players from '@/components/Players.vue'
+import Jogadores from '@/components/Jogadores.vue'
 
 export default {
   name: "Home",
   components: {
-    Players
+    Jogadores
   }
 };
 </script>

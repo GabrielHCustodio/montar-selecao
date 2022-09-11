@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '@/components/Home.vue'
+import ListaJogadores from '@/components/ListaJogadores'
 
 const routes = [
   {
@@ -7,9 +8,12 @@ const routes = [
     component: Home,
     children: [
       {
-        path: 'players/:tipo',
-        name: 'players',
-        props: true
+        path: 'posicao/:tipo',
+        name: 'posicao',
+        props: true,
+        components: {
+          posicao: ListaJogadores
+        }
       }
     ]
   }
