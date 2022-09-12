@@ -21,7 +21,7 @@ export default {
             goleiros: state => state.jogadores.goleiros,
             zagueiros: state => state.jogadores.zagueiros,
             laterais: state => state.jogadores.laterais,
-            meioCampo: state => state.jogadores.meioCampo,
+            meias: state => state.jogadores.meias,
             atacantes: state => state.jogadores.atacantes
         }),
         dados() {
@@ -29,7 +29,7 @@ export default {
                 case 'goleiros': return this.goleiros
                 case 'zagueiros': return this.zagueiros
                 case 'laterais': return this.laterais
-                case 'meio-campo': return this.meioCampo
+                case 'meias': return this.meias
                 case 'atacantes': return this.atacantes
             }
             return []

@@ -28,8 +28,8 @@
           <li class="nav-item">
             <router-link
               class="nav-link"
-              :to="{ name: 'posicao', params: { tipo: 'meio-campo' } }"
-              >Meios campo</router-link
+              :to="{ name: 'posicao', params: { tipo: 'meias' } }"
+              >Meias</router-link
             >
           </li>
           <li class="nav-item">
