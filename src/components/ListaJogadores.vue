@@ -1,6 +1,6 @@
 <template>
     <div>
-        <jogador v-for="(dado, indice) in dados" :key="indice" :dado="dado"/>
+        <jogador v-for="(dado, indice) in dados" :key="indice" :dado="dado" :tipo="tipo"/>
     </div>
 </template>
 

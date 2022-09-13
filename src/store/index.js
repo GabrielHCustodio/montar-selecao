@@ -3,27 +3,11 @@ import { createStore } from 'vuex'
 export default createStore({
   state: {
     escalacao: {
-      "goleiro": [
-        { "id": 1, "nome": "Alisson" },
-      ],
-      "zagueiros": [
-        { "id": 3, "nome": "Thiago Silva" },
-        { "id": 4, "nome": "Marquinhos" }
-      ],
-      "laterais": [
-        { "id": 2, "nome": "Danilo" },
-        { "id": 6, "nome": "Alex Sandro" }
-      ],
-      "meias": [
-        { "id": 5, "nome": "Casemiro" },
-        { "id": 18, "nome": "Fabinho" },
-        { "id": 10, "nome": "Lucas Paquetá" }
-      ],
-      "atacantes": [
-        { "id": 11, "nome": "Neymar" },
-        { "id": 20, "nome": "Vinícius Júnior" },
-        { "id": 17, "nome": "Raphinha" }
-      ]
+      "goleiro": [],
+      "zagueiros": [],
+      "laterais": [],
+      "meias": [],
+      "atacantes": []
     },
     jogadores: {
       "goleiros": [
@@ -65,6 +49,16 @@ export default createStore({
   getters: {
   },
   mutations: {
+    setEscalacao(state, item) {
+      let d = item.dados
+      let t = item.tipo
+
+      if(t == 'goleiros') state.escalacao.goleiro.push(d)
+      if(t == 'zagueiros') state.escalacao.zagueiros.push(d)
+      if(t == 'laterais') state.escalacao.laterais.push(d)
+      if(t == 'meias') state.escalacao.meias.push(d)
+      if(t == 'atacantes') state.escalacao.atacantes.push(d)
+    }
   },
   actions: {
   },
