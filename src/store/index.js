@@ -53,11 +53,15 @@ export default createStore({
       let d = item.dados
       let t = item.tipo
 
-      if(t == 'goleiros') state.escalacao.goleiro.push(d)
-      if(t == 'zagueiros') state.escalacao.zagueiros.push(d)
-      if(t == 'laterais') state.escalacao.laterais.push(d)
-      if(t == 'meias') state.escalacao.meias.push(d)
-      if(t == 'atacantes') state.escalacao.atacantes.push(d)
+      if(t == 'goleiros' && state.escalacao.goleiro.length < 1) state.escalacao.goleiro.push(d)
+      if(t == 'zagueiros' && state.escalacao.zagueiros.length < 2) state.escalacao.zagueiros.push(d)
+      if(t == 'laterais' && state.escalacao.laterais.length < 2) state.escalacao.laterais.push(d)
+      if(t == 'meias' && state.escalacao.meias.length < 3) state.escalacao.meias.push(d)
+      if(t == 'atacantes' && state.escalacao.atacantes.length < 3) state.escalacao.atacantes.push(d)
+    },
+    resetEscalacao(state, item) {
+      state.escalacao = item
+      alert('Equipes resetadas')
     }
   },
   actions: {

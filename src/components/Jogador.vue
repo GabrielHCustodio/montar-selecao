@@ -9,12 +9,21 @@
 </template>
 
 <script>
-import { mapMutations } from 'vuex'
+import { mapMutations, mapState } from 'vuex'
 export default {
     name: 'Jogador',
     props: {
         tipo: String,
         dado: Object
+    },
+    computed: {
+        ...mapState({
+            goleiros: state => state.escalacao.goleiro,
+            zagueiros: state => state.escalacao.zagueiros,
+            laterais: state => state.escalacao.laterais,
+            meias: state => state.escalacao.meias,
+            atacantes: state => state.escalacao.atacantes
+        })
     },
     methods: {
         ...mapMutations(['setEscalacao']),
@@ -23,7 +32,6 @@ export default {
                 tipo: this.tipo,
                 dados: this.dado
             }
-            console.log(jogador)
             this.setEscalacao(jogador)
         }
     }
