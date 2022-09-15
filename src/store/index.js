@@ -33,7 +33,8 @@ export default createStore({
         { "id": 8, "nome": "Fred" },
         { "id": 15, "nome": "Bruno Guimarães" },
         { "id": 10, "nome": "Lucas Paquetá" },
-        { "id": 21, "nome": "Everton Ribeiro" }
+        { "id": 21, "nome": "Everton Ribeiro" },
+        { "id": 26, "nome": "Philipe Coutinho" }
       ],
       "atacantes": [
         { "id": 11, "nome": "Neymar" },
